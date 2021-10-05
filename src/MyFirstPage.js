@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Component } from 'react';
+import Theme from './components/Theme';
 export default function MyFirstPage() {
   const [clicks, setClicks] = useState(0);
   const [movies, setMovies] = useState([]);
@@ -21,7 +23,9 @@ export default function MyFirstPage() {
 
 
   return (
+    <Theme>
     <div>
+    
       <h1>Hello World !!! </h1>
       <div className="container">
         <div className="row">
@@ -56,5 +60,6 @@ export default function MyFirstPage() {
             </div>
 
     </div>
+    </Theme>
   );
 }
