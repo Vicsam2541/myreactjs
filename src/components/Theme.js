@@ -25,11 +25,30 @@ export default function Theme(props) {
             <hr className="sidebar-divider my-0" />
             {/* Nav Item - Dashboard */}
             <li className="nav-item active">
-              <a className="nav-link" href="index.html">
+              <a className="nav-link" href="/">
                 <i className="fas fa-fw fa-tachometer-alt" />
                 <span>Dashboard</span>
               </a>
             </li>
+            <li className="nav-item active">
+              <a className="nav-link" href="/ant">
+                <i className="fas fa-fw fa-tachometer-alt" />
+                <span>Ant</span>
+              </a>
+            </li>
+            <li className="nav-item active">
+              <a className="nav-link" href="/bird">
+                <i className="fas fa-fw fa-tachometer-alt" />
+                <span>Bird</span>
+              </a>
+            </li>
+            <li className="nav-item active">
+              <a className="nav-link" href="/cat">
+                <i className="fas fa-fw fa-tachometer-alt" />
+                <span>Cat</span>
+              </a>
+            </li>
+
             {/* Divider */}
             <hr className="sidebar-divider" />
             {/* Heading */}
@@ -547,7 +566,7 @@ export default function Theme(props) {
               <div className="container-fluid">
                 {/* Page Heading */}
                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                  <h1 className="h3 mb-0 text-gray-800">Dashboard</h1>
+                <h1 className="h3 mb-0 text-gray-800">{ props.title } </h1>
                   <a
                     href="#"
                     className="
@@ -559,9 +578,8 @@ export default function Theme(props) {
                     <i className="fas fa-download fa-sm text-white-50" />{" "}
                     Generate Report
                   </a>
-                  
                 </div>
-                { props.children }            
+                {props.children}
                 {/* Content Row */}
                 <div className="row">
                   {/* Earnings (Monthly) Card Example */}
